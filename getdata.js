@@ -53,13 +53,12 @@ function updateData() {
 
   // Populate this data from e.g. form.
   var raw = JSON.stringify({
-    cid: form.cid2.value,
-    cemail: form.cemail.value,
+    cid: form.cid2.value
   });
 
   console.log(raw);
   var requestOptions = {
-    method: "PUT",
+    method: "POST",
     headers: myHeaders,
     body: raw,
   };
@@ -71,24 +70,24 @@ function updateData() {
 }
 
 
-function deleteData() {
-  var requestOptions = {
-    method: "DELETE",
-  };
-  url = "http://localhost:3000/customer/delete?cid=" + form.cid.value;
-  fetch(url, requestOptions)
-    .then((response) => response.text())
-    .then((result) => (document.getElementById("mypanel").innerHTML = result))
-    .catch((error) => console.log("error", error));
-}
-function searchData() {
-  var requestOptions = {
-    method: "GET",
-  };
-  url = "http://localhost:3000/customer/id?cid=" + form.cid1.value;
-  console.log(url);
-  fetch(url, requestOptions)
-    .then((response) => response.text())
-    .then((result) => (document.getElementById("mypanel").innerHTML = result))
-    .catch((error) => console.log("error", error));
-}
+// function deleteData() {
+//   var requestOptions = {
+//     method: "DELETE",
+//   };
+//   url = "http://localhost:3000/customer/delete?cid=" + form.cid.value;
+//   fetch(url, requestOptions)
+//     .then((response) => response.text())
+//     .then((result) => (document.getElementById("mypanel").innerHTML = result))
+//     .catch((error) => console.log("error", error));
+// }
+// function searchData() {
+//   var requestOptions = {
+//     method: "GET",
+//   };
+//   url = "http://localhost:3000/customer/id?cid=" + form.cid1.value;
+//   console.log(url);
+//   fetch(url, requestOptions)
+//     .then((response) => response.text())
+//     .then((result) => (document.getElementById("mypanel").innerHTML = result))
+//     .catch((error) => console.log("error", error));
+// }
