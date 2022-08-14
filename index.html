@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Read Data from Server</title>
+    <script src="getdata.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <!-- My sample pages -->
+  </head>
+  <body>
+    <div>
+      <h1>CONNECT TO API SERVER</h1>
+    </div>
+
+  <form id="form">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm bg-success">
+            <label for="name">Price</label>
+            <input type="text" id="name" placeholder="Enter Price..." /><br />
+            <br /><br />
+            <button type="button" class="btn btn-info" onclick="postData()">
+              Transactions Less Than
+            </button>
+            <br /> <br />
+          </div>
+          <div class="col-sm bg-success">
+            <label for="cid2">ID</label>
+            <input type="text" id="cid2" placeholder="Enter Id..." /><br />
+            <label for="cemail">Email</label>
+            <input type="text" id="cemail" placeholder="Enter Email..." />
+            <br /><br />
+            <button type="button" class="btn btn-info" onclick="updateData()">
+              Update Customer
+            </button>
+            <br /> <br />
+          </div>
+          <div class="col-sm bg-warning">
+            <label for="cid">Customer ID</label>
+            <input type="text" id="cid" placeholder="Enter Customer ID.." /><br />
+            <br /><br />
+            <button type="button" class="btn bg-danger" onclick="deleteData()">
+              Delete
+            </button>
+            <br /> <br />
+          </div>
+    
+          <div class="col-sm bg-warning">
+            <label for="cid">Customer ID</label>
+            <input type="text" id="cid1" placeholder="Enter Customer ID.." /><br />
+            <br /><br />
+            <button type="button" class="btn bg-danger" onclick="searchData()">
+              Search
+            </button>
+            <br /> <br />
+          </div>
+
+      </div>
+      <div class="bg-info">
+        <button type="button" class="btn btn-light" onclick="getFromServer()">
+          View All
+        </button>
+      </div>
+     
+    </form>
+    <div id="mypanel">  
+      
+    
+    </div>
+  </body>
+</html>
